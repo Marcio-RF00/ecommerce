@@ -109,7 +109,7 @@ class Category extends Model {
 
 	}
 
-	/*public function getProductsPage($page = 1, $itemsPerPage = 8)
+	public function getProductsPage($page = 1, $itemsPerPage = 8)
 	{
 
 		$start = ($page - 1) * $itemsPerPage;
@@ -134,8 +134,7 @@ class Category extends Model {
 			'total'=>(int)$resultTotal[0]["nrtotal"],
 			'pages'=>ceil($resultTotal[0]["nrtotal"] / $itemsPerPage)
 		];
-
-	}*/
+	}
 
 	public function addProduct(Product $product)
 	{
