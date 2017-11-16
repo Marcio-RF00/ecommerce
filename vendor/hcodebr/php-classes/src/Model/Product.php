@@ -17,7 +17,7 @@ class Product extends Model {
 
 	}
 
-	/*public static function checkList($list)
+	public static function checkList($list)
 	{
 
 		foreach ($list as &$row) {
@@ -30,7 +30,7 @@ class Product extends Model {
 
 		return $list;
 
-	}*/
+	}
 
 	public function save()
 	{
