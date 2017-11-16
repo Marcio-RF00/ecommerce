@@ -74,7 +74,7 @@ class Category extends Model {
 
 	}
 
-	/*public function getProducts($related = true)
+	public function getProducts($related = true)
 	{
 
 		$sql = new Sql();
@@ -109,7 +109,7 @@ class Category extends Model {
 
 	}
 
-	public function getProductsPage($page = 1, $itemsPerPage = 8)
+	/*public function getProductsPage($page = 1, $itemsPerPage = 8)
 	{
 
 		$start = ($page - 1) * $itemsPerPage;
@@ -135,7 +135,7 @@ class Category extends Model {
 			'pages'=>ceil($resultTotal[0]["nrtotal"] / $itemsPerPage)
 		];
 
-	}
+	}*/
 
 	public function addProduct(Product $product)
 	{
@@ -161,7 +161,7 @@ class Category extends Model {
 
 	}
 			
-	public static function getPage($page = 1, $itemsPerPage = 10)
+	/*public static function getPage($page = 1, $itemsPerPage = 10)
 	{
 
 		$start = ($page - 1) * $itemsPerPage;
