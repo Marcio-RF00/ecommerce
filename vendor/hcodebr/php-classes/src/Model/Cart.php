@@ -10,7 +10,7 @@ use \Hcode\Model\User;
 class Cart extends Model {
 
 	const SESSION = "Cart";
-	/*const SESSION_ERROR = "CartError";*/
+	const SESSION_ERROR = "CartError";
 
 	public static function getFromSession()
 	{
@@ -44,9 +44,14 @@ class Cart extends Model {
 				$cart->save();
 
 				$cart->setToSession();
+
+
 			}
+
 		}
+
 		return $cart;
+
 	}
 
 	public function setToSession()
@@ -118,7 +123,7 @@ class Cart extends Model {
 			':idproduct'=>$product->getidproduct()
 		]);
 
-		/*$this->getCalculateTotal();*/
+		$this->getCalculateTotal();
 
 	}
 
@@ -143,7 +148,7 @@ class Cart extends Model {
 
 		}
 
-		/*$this->getCalculateTotal();*/
+		$this->getCalculateTotal();
 
 	}
 
@@ -167,7 +172,7 @@ class Cart extends Model {
 
 	}
 
-	/*public function getProductsTotals()
+	public function getProductsTotals()
 	{
 
 		$sql = new Sql();
@@ -200,6 +205,7 @@ class Cart extends Model {
 
 			if ($totals['vlheight'] < 2) $totals['vlheight'] = 2;
 			if ($totals['vllength'] < 16) $totals['vllength'] = 16;
+			if ($totals['vlwidth'] < 11) $totals['vlwidth'] = 11;
 
 			$qs = http_build_query([
 				'nCdEmpresa'=>'',
@@ -311,7 +317,7 @@ class Cart extends Model {
 		$this->setvlsubtotal($totals['vlprice']);
 		$this->setvltotal($totals['vlprice'] + (float)$this->getvlfreight());
 
-	}*/
+	}
 
 }
 

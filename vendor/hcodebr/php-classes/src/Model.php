@@ -11,7 +11,7 @@ class Model {
 
 		$method = substr($name, 0, 3);
 		$fieldName = substr($name, 3, strlen($name));
-			
+
 		switch ($method)
 		{
 
@@ -24,23 +24,27 @@ class Model {
 			break;
 
 		}
+
 	}
 
-	public function setData($data)
+	public function setData($data = array())
 	{
 
-		foreach ($data as $key => $value)
-		{
-
+		foreach ($data as $key => $value) {
+			
 			$this->{"set".$key}($value);
 
 		}
+
 	}
 
 	public function getValues()
 	{
 
 		return $this->values;
+
 	}
+
 }
-?>
+
+ ?>
