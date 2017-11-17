@@ -60,7 +60,7 @@ $app->get("/cart/:idproduct/remove", function($idproduct){
 
 	$cart = Cart::getFromSession();
 
-	$cart->addProduct($product, true);
+	$cart->removeProduct($product, true);
 
 	header("Location: /cart");
 	exit;

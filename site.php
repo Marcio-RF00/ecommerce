@@ -5,6 +5,8 @@ use \Hcode\Model\Product;
 use \Hcode\Model\User;
 use \Hcode\Model\Address;
 use \Hcode\Model\Cart;
+use \Hcode\Model\Order;
+use \Hcode\Model\OrderStatus;
 
 $app->get('/', function() {
 
@@ -328,7 +330,7 @@ $app->post("/checkout", function(){
 
 	$address->save();
 
-	/*$cart = Cart::getFromSession();
+	$cart = Cart::getFromSession();
 
 	$cart->getCalculateTotal();
 
@@ -344,7 +346,7 @@ $app->post("/checkout", function(){
 
 	$order->save();
 
-	switch ((int)$_POST['payment-method']) {
+	/*switch ((int)$_POST['payment-method']) {
 
 		case 1:
 		header("Location: /order/".$order->getidorder()."/pagseguro");
@@ -355,7 +357,7 @@ $app->post("/checkout", function(){
 		break;
 
 	}*/
-	header("Location: /order");
+	header("Location: /order/".$order->getidorder());
 	exit;
 
 });
@@ -363,5 +365,6 @@ $app->post("/checkout", function(){
 require_once("site-categories.php");
 require_once("site-products.php");
 require_once("site-cart.php");
+require_once("site-order.php");
 
 ?>
