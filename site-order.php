@@ -94,7 +94,7 @@ $app->get("/boleto/:idorder", function($idorder){
 
 });
 
-/*$app->get("/profile/orders", function(){
+$app->get("/profile/orders", function(){
 
 	User::verifyLogin(false);
 
@@ -108,7 +108,7 @@ $app->get("/boleto/:idorder", function($idorder){
 
 });
 
-/*$app->get("/profile/orders/:idorder", function($idorder){
+$app->get("/profile/orders/:idorder", function($idorder){
 
 	User::verifyLogin(false);
 
@@ -130,5 +130,5 @@ $app->get("/boleto/:idorder", function($idorder){
 		'products'=>$cart->getProducts()
 	]);	
 
-});*/
+});
 ?>
