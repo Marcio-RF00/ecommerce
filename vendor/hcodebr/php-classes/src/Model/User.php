@@ -53,11 +53,8 @@ class User extends Model
 			} else {
 
 				return false;
-
 			}
-
 		}
-
 	}
 
 	public static function login($login, $password)
