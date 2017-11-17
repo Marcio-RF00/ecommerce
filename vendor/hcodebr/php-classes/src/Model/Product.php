@@ -149,7 +149,7 @@ class Product extends Model {
 
 	}
 
-	/*public function getFromURL($desurl)
+	public function getFromURL($desurl)
 	{
 
 		$sql = new Sql();
@@ -176,7 +176,7 @@ class Product extends Model {
 
 	}
 
-	public static function getPage($page = 1, $itemsPerPage = 10)
+	/*public static function getPage($page = 1, $itemsPerPage = 10)
 	{
 
 		$start = ($page - 1) * $itemsPerPage;
