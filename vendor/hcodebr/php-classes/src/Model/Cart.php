@@ -108,7 +108,7 @@ class Cart extends Model {
 
 	}
 
-	/*public function addProduct(Product $product)
+	public function addProduct(Product $product)
 	{
 
 		$sql = new Sql();
@@ -118,7 +118,7 @@ class Cart extends Model {
 			':idproduct'=>$product->getidproduct()
 		]);
 
-		$this->getCalculateTotal();
+		/*$this->getCalculateTotal();*/
 
 	}
 
@@ -143,7 +143,7 @@ class Cart extends Model {
 
 		}
 
-		$this->getCalculateTotal();
+		/*$this->getCalculateTotal();*/
 
 	}
 
@@ -167,7 +167,7 @@ class Cart extends Model {
 
 	}
 
-	public function getProductsTotals()
+	/*public function getProductsTotals()
 	{
 
 		$sql = new Sql();
