@@ -9,7 +9,7 @@ class Address extends Model {
 
 	const SESSION_ERROR = "AddressError";
 
-	/*public static function getCEP($nrcep)
+	public static function getCEP($nrcep)
 	{
 
 		$nrcep = str_replace("-", "", $nrcep);
@@ -77,7 +77,7 @@ class Address extends Model {
 
 		$_SESSION[Address::SESSION_ERROR] = $msg;
 
-	}*/
+	}
 
 	public static function getMsgError()
 	{
